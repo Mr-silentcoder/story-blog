@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout4"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/liteWhite"
+    tools:context=".SpinnerFragment">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_bold"
+        android:text="WATCH AND EARN"
+        android:textColor="@color/liteblack"
+        android:textSize="23sp"
+        app:layout_constraintBottom_toTopOf="@+id/Relativespin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RelativeLayout
+        android:id="@+id/Relativespin"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="27dp"
+        android:layout_marginEnd="27dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/backgroundwheel"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </RelativeLayout>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/layoutspin"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="@+id/Relativespin"
+        app:layout_constraintDimensionRatio="1"
+        app:layout_constraintEnd_toEndOf="@+id/Relativespin"
+        app:layout_constraintStart_toStartOf="@+id/Relativespin"
+        app:layout_constraintTop_toTopOf="@+id/Relativespin"
+        app:layout_constraintVertical_bias="0.85">
+
+        <com.maxlab.storyhub.SpinWheel.LuckyWheelView
+            android:id="@+id/luckyWheel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:lkwBackgroundColor="@android:color/transparent"
+            app:lkwCenterImage="@drawable/wheel"
+            app:lkwCursor="@drawable/spin"
+            app:lkwTextColor="#F8F8F8" />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+    <Button
+        android:id="@+id/spinner"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/button_red"
+        android:fontFamily="@font/roboto_bold"
+        android:padding="10dp"
+        android:text="Spin"
+        android:textSize="18sp"
+        app:backgroundTint="#FA3C00"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/layoutspin" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
