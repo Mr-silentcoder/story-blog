@@ -1,6 +1,10 @@
 # story-blog
 <b>firebase story blog android</b>
 
+Android Studio 4.1.1
+Build #AI-201.8743.12.41.6953283, built on November 4, 2020
+
+
 <table>
   <tr>
     <td>Splash Screen</td>
